@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT COMPLAINT - CyberBlock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="static\cblogo.JPG" type="image/x-icon">
+
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+
+    .jumbotron {
+        background-color: #F32013;
+        color: #ffffff;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .jumbotron h1 {
+        font-size: 3rem;
+    }
+
+    .form-box {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    .footer {
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+
+    /* Additional CSS for the dropdown to open on hover */
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #00eeff;
+        /* Change text col*/
+    }
+    #successMessage {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+    }
+    #imagePreview {
+        margin-top: 20px;
+        max-width: 300px;
+    }
+
+    #imagePreview img {
+        max-width: 100%;
+        height: auto;
+    }
+   
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        margin-right: 10px;
+    }
+
+    button.stop-recording {
+        background-color: #dc3545; /* Red color */
+    }
+
+    button:disabled {
+        background-color: #ced4da;
+        color: #6c757d;
+        cursor: not-allowed;
+    }
+
+    #transcript {
+        margin-top: 20px;
+    }
+    #successMessage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<body class="bg-black.bg-gradient">
+
+    <!--Nav Bar Section -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="static\cblogo.JPG" width="30" height="30" class="d-inline-block align-top" alt=""> Cyber Block
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CALL-TO-ACTION.html">CALL TO ACTION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Info.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Utilities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://spam-email-detector-1.onrender.com/#spam-email-detector">EMAIL SPAM
+                                    DETECT</a></li>
+                            <li><a class="dropdown-item" href="https://report-complaint-2.onrender.com/">REPORT</a></li>
+                            <li><a class="dropdown-item" href="#">NEWS AND UPDATES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="APPOINTMENT.html">APPOINTMENTS</a></li>
+                            <li><a class="dropdown-item" href="quiz.html">TAKE QUIZ !!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <a href="login.html" target="_blank"><button type="button"
+                            class="btn btn-primary">Login/Signup</button></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>REPORT COMPLAINT</h1>
+            <p>Please fill out the form below to report an incident.</p>
+        </div>
+    </div>
+    <br>
+    <!-- Form Section -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="form-box">
+                    <form id="incidentForm" action="/" method="POST" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="category">Category of Incident:</label>
+                            <select class="form-control" id="category" name="Category" required>
+                                <option value="">Select Category</option>
+                                <option value="Cyber Crime">Credit Card Scam</option>
+                                <option value="Fraud">Shopping Scam</option>
+                                <option value="Harassment">Fraud Calls</option>
+                                <option value="Other">Spam Emails</option>
+                                <option value="Other">Cyber Sexual-Harrasment</option>
+                                <option value="Other">Data Breach</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="datetime">Date & Time of Incident:</label>
+                            <input type="datetime-local" class="form-control" id="datetime" name="Date_Time_Incident"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location of Incident:</label>
+                            <input type="text" class="form-control" id="location" name="Location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea class="form-control" id="description" name="Description" rows="3"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="voice">Voice:</label>
+                            <br>
+                            <button id="startRecording">Start Recording</button>
+                            <button id="stopRecording" disabled>Stop Recording</button>
+                            <div id="transcript"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Upload Image:</label>
+                            <input type="file" id="imageInput" accept="image/*" name="Image">
+                        </div>
+                        
+                        <!-- Preview area for uploaded image -->
+                        <div id="imagePreview">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="Name" required>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="form-control" id="email" name="Email_Address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Contact Number:</label>
+                            <input type="tel" class="form-control" id="number" name="Contact_Number" pattern="[0-9]{10}"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+
+                    </form>
+                    <!-- Success message container -->
+                    
+            </div>
+        </div>
+    </div>
+    <div id="successMessage" class="text-center"><strong>Successfully!</strong> Form submitted,We will contact you shortly.</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <br>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cyber-Block.All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha384-HhZy9WQCEsmTWMXcjtFm29rHC+L7lJMvv8oaoC4uAnb/dmg1R8Xb5EfzSkB/Z0Jl" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for Form Validation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    
+    <script>
+        document.getElementById('incidentForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            // Display success message
+            document.getElementById('successMessage').style.display = 'block';
+            // Reset form if needed
+            // document.getElementById('incidentForm').reset();
+        });
+        function validateForm() {
+            var category = document.getElementById("category").value;
+            var datetime = document.getElementById("datetime").value;
+            var location = document.getElementById("location").value;
+            var description = document.getElementById("description").value;
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+    
+            if (category === "" || datetime === "" || location === "" || description === "" || name === "" || email === "" || number === "") {
+                alert("All fields are required!");
+                return false;
+            }
+    
+            var numberPattern = /^[0-9]{10}$/;
+            if (!numberPattern.test(number)) {
+                alert("Please enter a valid 10-digit phone number!");
+                return false;
+            }
+    
+            return true;
+        }
+        document.getElementById('incidentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data.message);
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        });
+        const startRecordingButton = document.getElementById('startRecording');
+        const stopRecordingButton = document.getElementById('stopRecording');
+        const transcriptDiv = document.getElementById('transcript');
+        let isRecording = false;
+        let isRecorded = false; // Added flag to track if recording has been made
+        let recorder;
+        let recognition = new window.webkitSpeechRecognition(); // For Chrome
+
+        startRecordingButton.addEventListener('click', startRecording);
+        stopRecordingButton.addEventListener('click', stopRecording);
+
+        recognition.continuous = true;
+
+        recognition.onresult = function (event) {
+            const transcript = event.results[event.results.length - 1][0].transcript;
+            transcriptDiv.innerHTML = transcript;
+        }
+
+        recognition.onerror = function (event) {
+            console.error('Speech recognition error:', event.error);
+        }
+
+        function startRecording() {
+            if (isRecording) { // Stop the current recording if in progress
+                stopRecording();
+            }
+
+            startRecordingButton.disabled = true;
+            stopRecordingButton.disabled = false;
+            isRecording = true;
+            isRecorded = true; // Set flag to true to indicate recording has been made
+
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    recorder = new MediaRecorder(stream);
+                    recorder.start();
+
+                    recorder.ondataavailable = function (event) {
+                        const audioBlob = event.data;
+                        const audioUrl = URL.createObjectURL(audioBlob);
+
+                        const audioElement = document.createElement('audio');
+                        audioElement.controls = true;
+                        audioElement.src = audioUrl;
+                        transcriptDiv.innerHTML = ''; // Clear previous recording
+                        transcriptDiv.appendChild(audioElement);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error accessing microphone:', error);
+                });
+
+            recognition.start();
+        }
+
+        function stopRecording() {
+            if (isRecording) {
+                startRecordingButton.disabled = false;
+                stopRecordingButton.disabled = true;
+                isRecording = false;
+
+                recorder.stop();
+                recognition.stop();
+
+                stopRecordingButton.classList.remove('stop-recording');
+            }
+        }
+
+        stopRecordingButton.addEventListener('click', function() {
+            this.classList.add('stop-recording');
+        });
+        function handleImageUpload(event) {
+    const file = event.target.files[0]; // Get the uploaded file
+    const imagePreview = document.getElementById('imagePreview'); // Get the image preview area
+
+    // Check if a file is selected
+    if (file) {
+        // Create a FormData object to send the file to the server
+        const formData = new FormData();
+        formData.append('Image', file);
+
+        // Send the file to the server using fetch
+        fetch('/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Image upload response:', data);
+            // Display success message or handle response as needed
+        })
+        .catch(error => {
+            console.error('Error uploading image:', error);
+            // Display error message or handle error as needed
+        });
+
+        // Create a FileReader object to read the file
+        const reader = new FileReader();
+
+        // Set up event listener for when file reading is completed
+        reader.onload = function(event) {
+            const imageUrl = event.target.result; // Get the image URL
+            // Create an img element to display the uploaded image
+            const imgElement = document.createElement('img');
+            imgElement.src = imageUrl; // Set the src attribute to the image URL
+            imgElement.alt = 'Uploaded Image'; // Set alt text for the image
+            // Append the img element to the image preview area
+            imagePreview.innerHTML = ''; // Clear previous content
+            imagePreview.appendChild(imgElement);
+        };
+
+        // Read the uploaded file as a data URL
+        reader.readAsDataURL(file);
+    }
+}
+        // Get the image input element
+        const imageInput = document.getElementById('imageInput');
+        // Add event listener for when a file is selected
+        imageInput.addEventListener('change', handleImageUpload);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP PAGE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-DNePK1DnCGsCxV3IZeLsK/CeJhJX9iurRh5/dJvRRbFZrVOyH2bko5E0CrYh5jvx6WjimJPbNGKqUm5Sp97Y3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="cblogo.JPG" type="image/x-icon">
+</head>
+
+<body>
+    <!--Nav Bar Section -->
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="cblogo.JPG" width="30" height="30" class="d-inline-block align-top" alt=""> Cyber Block
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pagesfiles\CALL-TO-ACTION.html">CALL TO ACTION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pagesfiles\Info.htmll">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Utilities
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://spam-email-detector-1.onrender.com/#spam-email-detector">EMAIL
+                  SPAM DETECT</a></li>
+              <li><a class="dropdown-item" href="https://report-h5q6.onrender.com">REPORT</a></li>
+              <li><a class="dropdown-item" href="News.html">NEWS AND UPDATES</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="registrations.html">Workshop Registrations</a></li>
+              <li><a class="dropdown-item" href="quiz.html">TAKE QUIZ !!</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <a href="login.html" target="_blank"><button type="button" class="btn btn-primary">Login/Signup</button></a>
+        </form>
+      </div>
+    </div>
+  </nav>
+    <!-- Main Container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!-- Signup Container -->
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <!-- Left Box -->
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+                style="background: #000000;">
+                <div class="featured-image mb-3">
+                    <img src="cblogo.JPG" class="img-fluid">
+                </div>
+            </div>
+            <!-- Right Box -->
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Welcome, New User</h2>
+                        <p>Create your account to get started.</p>
+                    </div>
+                    <form id="signupForm" class="w-100" novalidate>
+                        <div class="input-group mb-3">
+                            <input type="text" id="fullname" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Full Name" required>
+                            <div class="error-message" id="fullnameError"></div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" id="email" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Email address" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="password" id="password" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Password" required>
+                            <div class="input-group-text">
+                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                            </div>
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        <br>
+                        <div class="input-group mb-5">
+                            <input type="password" id="confirmPassword"
+                                class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password"
+                                required>
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="submit" class="btn btn-lg btn-success w-100 fs-6">Sign Up</button>
+                        </div>
+                        <div class="row">
+                            <small>Already have an account? <a href="login.html">Log In</a></small>
+                        </div>
+                        <div class="success-message mt-3" id="signupSuccessMessage" style="display: none;">Account
+                            created successfully!</div>
+                        <div class="error-message mt-3" id="signupErrorMessage" style="display: none;">Error
+                            occurred while creating account. Please try again.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-3 mt-5">
+        <div class="container text-center">
+            <center>&copy; 2024 Cyber Block &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="signup.js"></script>
+
+</body>
+
+</html>
