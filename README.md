@@ -5,10 +5,10 @@ Cyber Block is a Website that Deals with Spam-Emails-Detector and also Provides 
 TEAM NAME : MAKSQUARE
 
 TEAM MEMBERS:
-1.KOMAL PATHAK - https://github.com/Komalpathak2004
+1.MAYANK - https://github.com/Mayank-728190
 2.KUNAL NAYAK - https://github.com/NayaKunal30
 3.ANMOL KUMAR PANDIT - https://github.com/ANMOLPANDIT38
-4.MAYANK - https://github.com/Mayank-9918
+4.KOMAL PATHAK - https://github.com/Komalpathak2004
 
 
 
